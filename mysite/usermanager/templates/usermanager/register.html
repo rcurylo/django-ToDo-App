@@ -1,0 +1,14 @@
+{%extends "main/base.html"%}
+
+<!--enable crispy forms-->
+{%load crispy_forms_tags%}
+
+{%block content%}
+<form method="post" class="form-group">
+    {%csrf_token%}
+    #use crispy on form
+    {{form|crispy}}
+    <button type="submit" class="btn btn-success">Register</button>
+</form>
+
+{%endblock%}

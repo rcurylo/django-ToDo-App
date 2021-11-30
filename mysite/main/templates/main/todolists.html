@@ -1,0 +1,9 @@
+{%extends 'main/base.html'%}
+{%block content%}
+<h1>Todo Lists</h1>
+{%for item in todoLists%}
+<div class="input-group mb-3">
+    <a href="/todolist/{{item.id}}">{{item.name}}</a>
+</div>
+{%endfor%}
+{%endblock%}

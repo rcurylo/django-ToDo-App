@@ -1,0 +1,17 @@
+{%extends "main/base.html"%}
+
+{%block content%}
+<h3>Create a new Todo List</h3>
+
+<!-- creating a form -->
+<form method="post" action="/createtodolist/" class="form-group">
+    {% csrf_token %} <!--Required for forms-->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <button type="submit" , name="addList" class="btn btn-success">Add List</button>
+        </div>
+        {{form.name}}
+    </div>
+</form>
+
+{%endblock%}

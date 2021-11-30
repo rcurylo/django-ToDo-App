@@ -1,0 +1,19 @@
+<!--Uses template inheritance-->
+{% extends 'main/base.html' %}
+
+<!-- overrides element from base -->
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1>Welcome {{user.username}}!</h1>
+    {%else%}
+        <h1>Welcome!</h1>
+    {% endif %}
+    
+</h1>
+<p>This is a simple TODO list application built with Django.</p>
+{% if user.is_authenticated %}
+    
+{%else%}
+    <p>Please create an account to create a TODO list.</p>
+{%endif%}
+{% endblock %}
